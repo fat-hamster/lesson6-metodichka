@@ -6,6 +6,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatImageView;
+import androidx.core.widget.TextViewCompat;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -43,7 +44,7 @@ public class CoatOfArmsFragment extends Fragment {
         TypedArray images = getResources().obtainTypedArray(R.array.coat_of_arms_imgs);
         imageCoatOfArms.setImageResource(images.getResourceId(city.getImageIndex(), -1));
 
-        TextView cityNameView = getView().findViewById(R.id.textView);
+        TextView cityNameView = view.findViewById(R.id.textView);
         cityNameView.setText(city.getCityName());
 
         return view;
